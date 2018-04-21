@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "allowImportExportEverywhere": true,
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "no-console": 0
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "standard"],
+
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "document": false
+  }
+
+}

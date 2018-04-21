@@ -1,0 +1,11 @@
+@font-face {
+font-family: 'CocktailShaker'; /* IE9 Compat Modes */
+src: url('/assets/CocktailShaker.ttf.gz')  format('truetype'); /* Safari, Android, iOS */
+}
+
+header {
+  font-family: CocktailShaker;
+    margin: 0;
+    font-weight: 500;
+    font-size: 3.5em;
+}

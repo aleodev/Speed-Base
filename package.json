@@ -1,0 +1,28 @@
+{
+  "name": "react-redux-express",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"cd client && npm run start\" \"cd client && webpack --mode development\" \"cd client && gulp\"",
+    "build": "concurrently \"cd client && webpack --mode development\" \"cd client && gulp\"",
+    "stop": "taskkill /f /im node.exe",
+    "eslint": "cd client && webpack --mode development",
+    "server": "nodemon --watch server ./server/www localhost",
+    "copyassets": "\"cd client && echo polun1 | sudo -u root --stdin cp -R ./src/assets/ ./public/assets\""
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "compression": "^1.7.2",
+    "concurrently": "^3.5.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~3.1.0",
+    "express": "~4.16.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.17.3",
+    "npm-check-updates": "^2.14.1",
+    "request": "^2.85.0",
+    "serve-favicon": "^2.5.0"
+  }
+}
