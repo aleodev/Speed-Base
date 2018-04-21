@@ -5,7 +5,6 @@ import 'regenerator-runtime/runtime'
 // import { Provider } from 'react-redux'
 // import { createStore } from 'redux'
 import App from './js/App'
-// import './js/jquery/1.js'
 
 /*
 Here we are getting the initial state injected by the server. See routes/index.js for more details
