@@ -12,7 +12,7 @@ const Header = () => (<header>
           <div className="cloud x4"></div>
           <div className="cloud x5"></div>
         </div>
-        <h2>Speed Base</h2>
+        <h2>Speed Bas</h2>
       </div>
     </div>
   </div>
