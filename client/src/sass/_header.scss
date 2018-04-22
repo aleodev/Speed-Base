@@ -5,7 +5,10 @@ src: url('/assets/CocktailShaker.ttf.gz')  format('truetype'); /* Safari, Androi
 
 header {
   font-family: CocktailShaker;
-    margin: 0;
+    margin: 30px 0 30px 0;
     font-weight: 500;
     font-size: 3.5em;
+}
+h2{
+  margin: 0;
 }

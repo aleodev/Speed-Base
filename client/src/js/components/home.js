@@ -1,6 +1,6 @@
 import React from 'react'
 import $ from '../../../node_modules/jquery/dist/jquery.slim.min'
-import Data from '../containers/datagraphs.js'
+import Data from '../containers/data.js'
 
 export default class Home extends React.Component {
   constructor (props) {
@@ -24,18 +24,13 @@ export default class Home extends React.Component {
         $('#button-wrapper').hide()
       }
     })
+    // ERROR HANDLE
+    // if(this.state.err == 1){
+    //
+    // }
   }
-
-  // LOADING IMAGE
-  // $('#buttonID').click(function() {
-  //   $('#img').show(); <----here
-  //   $.ajax({
-  //     ....success: function(result) {
-  //       $('#img').hide(); <--- hide again
-  //     }
-  //   }}
-
-  // FUNCTIONS
+  // ON LOAD
+  // SEARCH FETCH
   handleSearch () {
     this.setState({loaded: 2})
     this.callApi()
@@ -59,7 +54,7 @@ export default class Home extends React.Component {
 
     return body
   };
-
+  // SEARCH FETCH
   // RENDER
   render () {
     return (<main>
@@ -81,4 +76,5 @@ export default class Home extends React.Component {
       <Data userData={this.state.userData} loaded={this.state.loaded}/>
     </main>)
   }
+  // RENDER
 }
