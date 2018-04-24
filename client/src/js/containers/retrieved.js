@@ -1,6 +1,6 @@
 import React from 'react'
 import $ from '../../../node_modules/jquery/dist/jquery.min'
-// this.props.data.tier
+// {this.props.getRanking.tier}
 export default class Retrieved extends React.Component {
   constructor (props) {
     super(props)
@@ -13,10 +13,11 @@ export default class Retrieved extends React.Component {
   }
   render () {
     return(
-      <div id="retrieved" className="row" style={{ display: 'none' }}>
-        <div id="profile" className="col-xs-3 col-sm-3 col-md-3 col-lg-3 box1">
+      <div id="retrieved" className="row" style={{ display: 'none' , margin: '0 15px 0 15px'}}>
+        <div id="profile" className="col-sm-3 box1">
+            <p>lol</p>
         </div>
-        <div id="match-history" className="col-xs-9 col-sm-9 col-md-9 col-lg-9 box2">
+        <div id="match-history" className="col-sm-8 sm-offset-1 box2">
         </div>
       </div>
     )
