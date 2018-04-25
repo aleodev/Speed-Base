@@ -4,17 +4,9 @@
 @import 'searchbar';
 @import 'clouds';
 @import 'button';
+@import 'retrievedData';
 @import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
 
-// body {
-//   background-color: black;
-//   font-family: 'Raleway', Arial, sans-serif;
-//   background: url("http://static.wixstatic.com/media/50a395_b41928c0fdab4b91ba37647ccb332405~mv2.png/v1/fill/w_1025,h_1024,al_t,usm_0.66_1.00_0.01/50a395_b41928c0fdab4b91ba37647ccb332405~mv2.png") no-repeat center top fixed;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
   body {
     background: linear-gradient(202deg, #2f3238, #98a2b6);
     background-size: 400% 400%;
