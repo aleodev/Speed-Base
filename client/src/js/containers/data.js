@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import Retrieved from './retrieved'
 
 // <div className="row">
 //   <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -17,36 +17,29 @@ export default class Data extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      loadingImages: ['https://i.imgur.com/X5qB5C4.gif', 'https://i.imgur.com/NEOK7O2.gif', 'https://i.imgur.com/QlvrAQT.gif', 'https://i.imgur.com/gZeaiSZ.gif', 'https://i.imgur.com/GtB5uQO.gif']
+      loadingImages: ['/assets/loading1.gif.gz', '/assets/loading2.gif.gz', '/assets/loading3.gif.gz', '/assets/loading4.gif.gz', '/assets/loading5.gif.gz']
     }
   }
-  render () {
+  componentDidMount(){
+
+  }
+  getRetrieval () {
     switch (this.props.loaded) {
       case 1:
         return (<h1>Initial</h1>)
-        break;
       case 2:
-        return (<img src={this.state.loadingImages[Math.floor((Math.random() * 5))]}/>)
-        break;
+        return (<img id="loadimg" alt="loading" src={this.state.loadingImages[Math.floor((Math.random() * 5))]}/>)
       case 3:
-        return (<h1>Success</h1>)
-        break;
+        return (<Retrieved getRanking={this.props.getRanking}/>)
       case 4:
         return (<h1>Private</h1>)
-        break;
+      default:
+      return (<h1>lol</h1>)
     }
-
-  }
 }
-
-Data.propTypes = {
-  userData: PropTypes.arrayOf(PropTypes.shape({
-    count: PropTypes.number.isRequired,
-    rating: PropTypes.number.isRequired,
-    season: PropTypes.number.isRequired,
-    score: PropTypes.number.isRequired,
-    time: PropTypes.number.isRequired,
-    tier: PropTypes.number.isRequired
-  })).isRequired,
-  loaded: PropTypes.number.isRequired
+  render () {
+    return(<div>
+      {this.getRetrieval()}
+    </div>)
+  }
 }
