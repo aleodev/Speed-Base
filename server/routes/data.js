@@ -5,6 +5,11 @@ var app = express();
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+router.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 router.post('/', urlencodedParser, function(req, res) {
   const options = {
@@ -24,8 +29,6 @@ router.post('/', urlencodedParser, function(req, res) {
     if (err || response.statusCode !== 200) {
       return res.sendStatus(500);
     }
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
     res.send(json)
       });
 
