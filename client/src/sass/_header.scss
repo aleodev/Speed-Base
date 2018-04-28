@@ -2,12 +2,16 @@
 font-family: 'CocktailShaker'; /* IE9 Compat Modes */
 src: url('/assets/CocktailShaker.ttf.gz')  format('truetype'); /* Safari, Android, iOS */
 }
-
+@font-face {
+font-family: 'HelveticaNeue'; /* IE9 Compat Modes */
+src: url('/assets/HelveticaNeueL.ttf.gz')  format('truetype'); /* Safari, Android, iOS */
+}
 header {
-  font-family: CocktailShaker;
+    font-family: CocktailShaker;
     margin: 30px 0 30px 0;
     font-weight: 500;
     font-size: 3.5em;
+    text-shadow: #FFF 0 0 10px;
 }
 h2{
   margin: 0;
