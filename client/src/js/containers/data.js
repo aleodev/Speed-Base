@@ -20,9 +20,7 @@ export default class Data extends React.Component {
       loadingImages: ['/assets/loading1.gif.gz', '/assets/loading2.gif.gz', '/assets/loading3.gif.gz', '/assets/loading4.gif.gz', '/assets/loading5.gif.gz']
     }
   }
-  componentDidMount(){
-
-  }
+  
   getRetrieval () {
     switch (this.props.loaded) {
       case 1:
@@ -34,7 +32,7 @@ export default class Data extends React.Component {
       case 4:
         return (<h1>Private</h1>)
       default:
-      return (<h1>lol</h1>)
+        return (<h1>Initial</h1>)
     }
 }
   render () {
