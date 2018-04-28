@@ -17,15 +17,25 @@ export default class Retrieved extends React.Component {
         }
       ],
       rankTable: [
-        {entry: '#7c807f'},
-        {beginner: '#333232'},
-        {advanced: '#1c1b1b'},
-        {expert: '#23254f'},
-        {bronze: '#917248'},
-        {silver: '#c7d4ea'},
-        {gold: '#ede79a'},
-        {platinum: '#66bc90'},
-        {diamond: '#4a35be'}
+        {
+          entry: '#7c807f'
+        }, {
+          beginner: '#333232'
+        }, {
+          advanced: '#1c1b1b'
+        }, {
+          expert: '#23254f'
+        }, {
+          bronze: '#917248'
+        }, {
+          silver: '#c7d4ea'
+        }, {
+          gold: '#ede79a'
+        }, {
+          platinum: '#66bc90'
+        }, {
+          diamond: '#4a35be'
+        }
       ]
     }
   }
@@ -94,16 +104,16 @@ export default class Retrieved extends React.Component {
               <span id="oSpan" className="rankTSpan lrankT">{Object.keys(this.state.rankTable[this.state.parsedData[1].oRating])}</span>
               <div className="progress-factor">
                 <div className="progress-bar">
-							<div className="bar has-rotation has-colors red heat-gradient" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-								<div className="tooltip heat-gradient-tooltip"></div>
-								<div className="bar-face face-position roof percentage"></div>
-								<div className="bar-face face-position back percentage"></div>
-								<div className="bar-face face-position floor percentage volume-lights"></div>
-								<div className="bar-face face-position left"></div>
-								<div className="bar-face face-position right"></div>
-								<div className="bar-face face-position front percentage volume-lights shine"></div>
-							</div>
-						</div>
+                  <div className="bar has-rotation has-colors red heat-gradient" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <div className="tooltip heat-gradient-tooltip"></div>
+                    <div className="bar-face face-position roof percentage"></div>
+                    <div className="bar-face face-position back percentage"></div>
+                    <div className="bar-face face-position floor percentage volume-lights"></div>
+                    <div className="bar-face face-position left"></div>
+                    <div className="bar-face face-position right"></div>
+                    <div className="bar-face face-position front percentage volume-lights shine"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

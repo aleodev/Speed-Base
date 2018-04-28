@@ -4,7 +4,7 @@ import Home from './components/home'
 import Header from './components/header'
 
 const App = () => (
-  <div className="container">
+  <div className="container-fluid">
     <Header/>
     <Route exact path="/" component={Home} />
   </div>
