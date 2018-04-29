@@ -1,8 +1,6 @@
 import React from 'react'
 
 const Header = () => (<header>
-
-  <div className="container">
     <div className="row">
       <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div id="clouds">
@@ -15,7 +13,6 @@ const Header = () => (<header>
         <h2>Speed Base</h2>
       </div>
     </div>
-  </div>
 </header>)
 
 export default Header
