@@ -1,8 +1,3 @@
-@media (min-width: 1400px){
-  .col-xl-6 {
-    max-width: 50% !important;
-  }
-}
 @import 'reset';
 @import 'bootstrap';
 @import 'bootstrap-variables';
@@ -11,7 +6,7 @@
 @import 'clouds';
 @import 'button';
 @import 'retrievedData';
-@import 'progressBar1';
+@import 'progressBar';
 @import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
 
 .container-fluid{
@@ -24,12 +19,11 @@
     margin:0 50px;
   }
 }
-@media (min-width: 1400px){
+@media (min-width: 1503px){
   .row{
     flex-wrap: nowrap;
   }
 }
-
   body {
     background: linear-gradient(202deg, #2f3238, #98a2b6);
     background-size: 400% 400%;

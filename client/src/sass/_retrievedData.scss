@@ -45,7 +45,6 @@
 
 .box1 {
      float: left;
-     max-height: 76vh;
      border: 1px solid white;
      background: -moz-linear-gradient(310deg, rgba(197,198,212,0.8) 0%, rgba(197,198,212,0.7) 38%, rgba(128,0,0,0) 100%);
     /* ff3.6+ */
@@ -67,10 +66,7 @@
 }
  .box2 {
      float: right;
-     max-height: 76vh;
-     border-color: white;
-     border-style: solid;
-     border-width: 1px 1px 1px 0;
+     border: 1px solid white;
      background: -moz-linear-gradient(310deg, rgba(197,198,212,0.8) 0%, rgba(197,198,212,0.7) 38%, rgba(128,0,0,0) 100%);
     /* ff3.6+ */
      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(197,198,212,0.8)), color-stop(38%, rgba(197,198,212,0.7)), color-stop(100%, rgba(128,0,0,0)));
@@ -91,19 +87,20 @@
 }
 
 .rankImg{
-  max-width: 70px;
+  max-width: 1200px;
 }
 
 .rankSpan{
   font-family: CocktailShaker;
-  font-size: 23px;
+  font-size: 32px;
   color: #fff;
   text-shadow: #FFF 0 0 10px;
 }
 
 .rankTSpan{
   font-family: HelveticaNeue;
-  font-size: 35px;
+  font-size: 50px;
+  color:white;
   text-transform:uppercase;
   text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
 }
@@ -118,11 +115,11 @@
 
 
 .winter{
-  margin:10px 0 10px 0;
+  margin:25px 0 25px 0;
 }
 
 .off{
-  margin:10px 0 10px 0;
+  margin:25px 0 25px 0;
 }
 
 .entry {
