@@ -85,12 +85,11 @@ export default class Retrieved extends React.Component {
         }}>
         <div id="profile" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 box1">
           <div className="ws row" id="winterseason">
-            <div className="winter col-xs-12 col-sm-12 col-md-5 col-lg-5">
-
+            <div className="winter col-xs-12 col-sm-12 col-md-12 col-lg-3">
               <img className="rankImg" alt="winterrank" src={"/assets/winter" + this.state.parsedData[0].wRating + ".png.gz"}/><br/>
               <span className="rankSpan">Winter Season</span>
             </div>
-            <div className="winter col-xs-12 col-sm-12 col-md-7 col-lg-7">
+            <div className="winter col-xs-12 col-sm-12 col-md-12 col-lg-3">
               <section id="snow"></section>
               <span id="wSpan" className="rankTSpan">{Object.keys(this.state.rankTable[this.state.parsedData[0].wRating])}</span>
               <div className="progress-factor">
@@ -107,14 +106,14 @@ export default class Retrieved extends React.Component {
                 </div>
               </div>
             </div>
-            <div id="winterData" style={{'display':'none'}} className="winter col-xs-12 col-sm-12 col-md-12">p</div>
+            <div id="winterData" style={{'display':'none'}} className="winter col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">p</div>
           </div>
           <div className="os row" id="offseason">
-            <div className="off col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            <div className="off col-xs-12 col-sm-12 col-md-12 col-lg-3">
               <img className="rankImg" alt="offseasonrank" src={"/assets/off" + this.state.parsedData[1].oRating + ".png.gz"}/><br/>
               <span className="rankSpan">Off Season</span>
             </div>
-            <div className="off col-xs-12 col-sm-12 col-md-7 col-lg-7">
+            <div className="off col-xs-12 col-sm-12 col-md-12 col-lg-3">
               <span id="oSpan" className="rankTSpan lrankT">{Object.keys(this.state.rankTable[this.state.parsedData[1].oRating])}</span>
               <div className="progress-factor">
                 <div className="progress-bar">
@@ -130,7 +129,7 @@ export default class Retrieved extends React.Component {
                 </div>
               </div>
             </div>
-            <div id="offData" style={{'display':'none'}} className="off col-xs-12 col-sm-12 col-md-12">p</div>
+            <div id="winterData" style={{'display':'none'}} className="winter col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">p</div>
           </div>
         </div>
         <div id="match-history" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 box2"></div>
