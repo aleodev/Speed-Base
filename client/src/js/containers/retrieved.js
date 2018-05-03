@@ -85,17 +85,17 @@ export default class Retrieved extends React.Component {
         }}>
         <div id="profile" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 box1">
           <div className="ws row" id="winterseason">
-            <div className="winter col-xs-12 col-sm-12 col-md-12 col-lg-3">
+            <div className="winter col-xs-12 col-sm-5 col-md-6 col-lg-3 col-xl-6">
               <img className="rankImg" alt="winterrank" src={"/assets/winter" + this.state.parsedData[0].wRating + ".png.gz"}/><br/>
               <span className="rankSpan">Winter Season</span>
             </div>
-            <div className="winter col-xs-12 col-sm-12 col-md-12 col-lg-3">
+            <div className="winter col-xs-12 col-sm-5 col-md-5 col-lg-3 col-xl-6">
               <section id="snow"></section>
               <span id="wSpan" className="rankTSpan">{Object.keys(this.state.rankTable[this.state.parsedData[0].wRating])}</span>
               <div className="progress-factor">
                 <div className="progress-bar">
-                  <div className="bar has-rotation has-colors red heat-gradient" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                    <div className="tooltip heat-gradient-tooltip"></div>
+                  <div className="bar has-rotation has-colors silver ruler-2" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100">
+                    <div className="tooltip white"></div>
                     <div className="bar-face face-position roof percentage"></div>
                     <div className="bar-face face-position back percentage"></div>
                     <div className="bar-face face-position floor percentage volume-lights"></div>
@@ -106,19 +106,21 @@ export default class Retrieved extends React.Component {
                 </div>
               </div>
             </div>
-            <div id="winterData" style={{'display':'none'}} className="winter col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">p</div>
+            <div id="winterData" style={{
+                'display' : 'none'
+              }} className="winter col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-8">p</div>
           </div>
           <div className="os row" id="offseason">
-            <div className="off col-xs-12 col-sm-12 col-md-12 col-lg-3">
+            <div className="off col-xs-12 col-sm-5 col-md-6 col-lg-3 col-xl-6">
               <img className="rankImg" alt="offseasonrank" src={"/assets/off" + this.state.parsedData[1].oRating + ".png.gz"}/><br/>
               <span className="rankSpan">Off Season</span>
             </div>
-            <div className="off col-xs-12 col-sm-12 col-md-12 col-lg-3">
+            <div className="off col-xs-12 col-sm-5 col-md-5 col-lg-3 col-xl-6">
               <span id="oSpan" className="rankTSpan lrankT">{Object.keys(this.state.rankTable[this.state.parsedData[1].oRating])}</span>
               <div className="progress-factor">
                 <div className="progress-bar">
-                  <div className="bar has-rotation has-colors red heat-gradient" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                    <div className="tooltip heat-gradient-tooltip"></div>
+                  <div className="bar has-rotation has-colors bronze ruler-2" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100">
+                    <div className="tooltip white"></div>
                     <div className="bar-face face-position roof percentage"></div>
                     <div className="bar-face face-position back percentage"></div>
                     <div className="bar-face face-position floor percentage volume-lights"></div>
@@ -129,7 +131,9 @@ export default class Retrieved extends React.Component {
                 </div>
               </div>
             </div>
-            <div id="winterData" style={{'display':'none'}} className="winter col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">p</div>
+            <div id="offData" style={{
+                'display' : 'none'
+              }} className="winter col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">p</div>
           </div>
         </div>
         <div id="match-history" className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 box2"></div>

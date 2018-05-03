@@ -2,15 +2,15 @@
 $factor-size: 4.5;
 $factor-width: 193px;
 
-$dark: #444444;
-$gray: #999999;
-$light-gray: #e0e0e0;
-$white: #fefefe;
-$red: #ec0071;
-$yellow: #f1c40f;
-$orange: #FF6900;
-$lime: #D7FF00;
-$cyan: #57caf4;
+$entry: #7c807f;
+$beginner: #333232;
+$advanced: #1c1b1b;
+$expert: #23254f;
+$bronze: #917248;
+$silver: #c7d4ea;
+$gold: #ede79a;
+$platinum: #66bc90;
+$diamond: #4a35be;
 $navy: #0a4069;
 
 $faces-color: rgba(white, .3);
@@ -23,13 +23,6 @@ $thumbSize: 1em;
 
 $sides-transition: .5s;
 $sides-transition-duration: $sides-transition;
-
-$winterSeason1: yellow;
-$winterSeason2: silver;
-
-$offSeason1: green;
-$offSeason2: red;
-
 
 h1 span.heading-3d
 {
@@ -67,9 +60,11 @@ h1 span.heading-3d
         .face-position.floor.volume-lights
         {
             box-shadow:
-                0 -0.2em 1em rgba(0,0,0,.15),
-                0 0.2em 0.1em -5px rgba(0,0,0,.3),
+                0 -0.2em 1em rgb(255, 255, 255),
+                0 0.2em 0.1em -5px rgba(255, 255, 255, 0.79),
                 0 -0.75em 1.75em rgba($white,.6);
+
+
         }
         .percentage:before
         {
@@ -96,18 +91,6 @@ h1 span.heading-3d
             }
         }
     }
-}
-
-@mixin set-gradient-step($value1, $value2, $percent)
-{
-	$color-result: mix($value2, $value1, $percent);
-
-	background-color: $color-result;
-	border-bottom: 1px solid darken($color-result, 05);
-	&:after
-	{
-		border-bottom-color: $color-result;
-	}
 }
 
 .progress-factor
@@ -235,13 +218,15 @@ h1 span.heading-3d
         }
     }
 
-    @include build-skin($red, 'red');
-    @include build-skin($yellow, 'yellow');
-    @include build-skin($lime, 'lime');
-    @include build-skin($navy, 'navy');
-    @include build-skin($cyan, 'cyan');
-    @include build-skin($dark, 'dark');
-    @include build-skin($orange, 'orange');
+    @include build-skin($entry, 'entry');
+    @include build-skin($beginner, 'beginner');
+    @include build-skin($advanced, 'advanced');
+    @include build-skin($expert, 'expert');
+    @include build-skin($bronze, 'bronze');
+    @include build-skin($silver, 'silver');
+    @include build-skin($gold, 'gold');
+    @include build-skin($platinum, 'platinum');
+    @include build-skin($diamond, 'diamond');
 
     @for $i from 1 to 101
     {
@@ -254,77 +239,30 @@ h1 span.heading-3d
         }
     }
 }
-//HEAT-GRADIENT
-.bar.heat-gradient
-{
-	// .3
-	$color1: rgba($lime, .8);
-	$color2: rgba($cyan, .6);
-	.face-position.left
-	{
-		background-color: $color1;
-	}
-	.percentage:before {
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ec545b+0,ec5799+100 */
-		background-color: $color1; /* Old browsers */
-		background: -moz-linear-gradient(left,  $color1 0%, $color2 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color1), color-stop(100%,$color2)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(left,  $color1 0%,$color2 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(left,  $color1 0%,$color2 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(left,  $color1 0%,$color2 100%); /* IE10+ */
-		background: linear-gradient(to right,  $color1 0%,$color2 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 ); /* IE6-9 */
-		background-size: 16em;
-	}
-	.volume-lights.shine:before
-	{
-		box-shadow: -2em 1.6em 3em -1em rgba($color1, 0.3), 2em 1.6em 3em -1em rgba($color2, 0.3);
-	}
-	&[valuenow="100"] .face-position.right
-	{
-		background-color: $color2;
-	}
+.bar.ruler .percentage:before {
+	background-image: 	linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+	background-size: 1em 1em, 1.6em 2em, .8em 2em;
 }
 
-
-@for $i from 1 to 101
-{
-	.bar[aria-valuenow='#{$i}']
-	{
-		.tooltip
-		{
-			left: $i * 1%;
-			&:before
-			{
-				content: '#{$i}%';
-			}
-		}
-		&.heat-gradient .heat-gradient-tooltip
-		{
-			@include set-gradient-step($lime, $cyan, $i);
-		}
-	}
+.bar.ruler-2 .percentage:before {
+	background-image: 	linear-gradient(90deg, rgba(255,255,255,.1) .8em, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.14) .8em, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.18) .8em, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.22) .8em, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.26) .8em, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.30) .8em, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.34) .8em, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.38) .8em, transparent 1px),
+						linear-gradient(90deg, rgba(255,255,255,.42) .8em, transparent 1px);
+	background-size: 16em 1em;
+	background-position: 1.6em 0, 3.2em 0, 4.8em 0, 6.4em 0, 8em 0, 9.6em 0, 11.2em 0, 12.8em 0, 14.4em 0;
 }
 
-input[type='checkbox']:checked  ~ .flexy-column .bar[aria-valuenow]
-{
-	&.heat-gradient
-	{
-		.tooltip
-		{
-			background-color: $cyan;
-			border-bottom: 1px solid darken($red, 05);
-			&:after {
-				border-bottom-color: $cyan;
-			}
-		}
-	}
-	.tooltip {
-		left: 90%;
-		&:before {
-			content: '90%';
-		}
-	}
+.bar.ruler-3 .percentage:before {
+	background-image: linear-gradient(90deg, rgba(255,255,255,.1) .8em, transparent 1px);
+	background-size: 1.6em 2em;
 }
 .tooltip
 {
@@ -405,6 +343,30 @@ input[type='checkbox']:checked  ~ .flexy-column .bar[aria-valuenow]
 		box-shadow: 0 .08em .1em .0em rgba(0, 0, 0, .2), 0 .1em 1.6em rgba(0, 0, 0, .2);
 		&:after {
 			border-bottom-color: $white;
+		}
+	}
+}
+
+@for $i from 1 to 101
+{
+	.bar[aria-valuenow='#{$i}']
+	{
+		.tooltip
+		{
+			left: $i * 1%;
+			&:before
+			{
+				content: '#{$i}%';
+			}
+		}
+	}
+}
+input[type='checkbox']:checked  ~ .flexy-column .bar[aria-valuenow]
+{
+	.tooltip {
+		left: 90%;
+		&:before {
+			content: '90%';
 		}
 	}
 }
